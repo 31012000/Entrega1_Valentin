@@ -3,5 +3,14 @@
 
 {% block contenidoQueCambia %}
     
-<h1> Este es el titulo de Comida que cambio</h1>
+<h1>Seccion agrega comida con formulario</h1>   
+
+    <form action="{% url 'FormularioComida' %}" method="POST"> {% csrf_token %}
+        <p>Ingrese marca: <input type="text" name="Ingrese marca"></p>
+        <p>Kilogramos de comida: <input type="number" name="Kilogramos de comida"></p>
+        <p>Tipo de comida: <input type="text" name="Tipo de comida"></p>
+
+        <input type="submit" name="Enviar">
+    </form>
+
 {% endblock %}

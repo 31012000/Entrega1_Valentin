@@ -3,5 +3,15 @@
 
 {% block contenidoQueCambia %}
     
-<h1> Este es el titulo de Clientes que cambio</h1>
+<h1>Seccion agrega clientes con formulario</h1>   
+
+    <form action="{% url 'FormularioClientes' %}" method="POST"> {% csrf_token %}
+        <p>Nombre: <input type="text" name="Nombre"></p>
+        <p>Apellido: <input type="text" name="Apellido"></p>
+        <p>Email: <input type="email" name="Email"></p>
+        <p>Nombre mascota: <input type="text" name="Nombre mascota"></p>
+
+        <input type="submit" name="Enviar">
+    </form>
+
 {% endblock %}

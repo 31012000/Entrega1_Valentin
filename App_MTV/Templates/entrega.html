@@ -3,5 +3,11 @@
 
 {% block contenidoQueCambia %}
     
-<h1> Este es el titulo de Entrega que cambio</h1>
+<h1>Seccion agrega entregas con formulario</h1>   
+
+    <form action="{% url 'FormularioEntrega' %}" method="POST"> {% csrf_token %}
+        <p>Direccion: <input type="text" name="Direccion"></p>
+        <input type="submit" name="Enviar">
+    </form>
+
 {% endblock %}

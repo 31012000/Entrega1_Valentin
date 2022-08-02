@@ -3,5 +3,15 @@
 
 {% block contenidoQueCambia %}
     
-<h1> Este es el titulo de Sucursal que cambio</h1>
+<h1>Sucursal </h1>   
+
+    <form action="{% url 'FormularioSucursal' %}" method="POST"> {% csrf_token %} 
+        
+        {{formularioSucursal.as_p}}
+
+        <input type="submit" name="Enviar">
+    </form>
+
+
 {% endblock %}
+
